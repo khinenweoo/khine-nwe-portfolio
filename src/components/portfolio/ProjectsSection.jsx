@@ -346,9 +346,9 @@ export default function ProjectsSection() {
             <div className="max-w-5xl mx-auto">
                 <SectionHeader
                     label="PROJECTS"
-                    title="Selected works across software, mobile,"
+                    title="Selected works across software, web"
                     highlight="AI,"
-                    titleAfter=" game, and immersive technology."
+                    titleAfter="and immersive technology."
                     description="A curated collection of academic, freelance, and competition projects spanning engineering, interaction design, cloud systems, mobile development, and game experiences."
                 />
 
