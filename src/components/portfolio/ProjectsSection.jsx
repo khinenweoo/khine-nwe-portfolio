@@ -62,7 +62,7 @@ const projects = [
         logo: '/logos/AEG.png',
         company: 'AEG',
         description: 'Learning management system for students and educators, featuring course management, progress tracking, and interactive learning materials.',
-        techStack: ['Flutter', 'Firebase', 'Dart'],
+        techStack: ['Laravel', 'Livewire', 'Firebase', 'MySQL', 'RESTful API'],
         github: 'https://github.com/khinenweoo/lms-app',
         link: '#',
     },
@@ -346,8 +346,8 @@ export default function ProjectsSection() {
             <div className="max-w-5xl mx-auto">
                 <SectionHeader
                     label="PROJECTS"
-                    title="Selected works across software, web"
-                    highlight="AI,"
+                    title="Selected works across software, web,"
+                    highlight=" AI,"
                     titleAfter="and immersive technology."
                     description="A curated collection of academic, freelance, and competition projects spanning engineering, interaction design, cloud systems, mobile development, and game experiences."
                 />
@@ -422,10 +422,10 @@ export default function ProjectsSection() {
                                     </div>
                                 </div>
                                 {/* Mobile tech stack */}
-                                <div className="flex md:hidden items-center gap-2 mt-3">
+                                <div className="flex flex-wrap md:hidden gap-1.5 mt-3">
                                     {project.techStack.map((tech) => (
-                                        <span key={tech} className="text-[10px] font-mono text-steel border border-white/10 px-2 py-0.5 rounded flex items-center gap-1">
-                                            <span className="w-1 h-1 rounded-full bg-circuit/60" />
+                                        <span key={tech} className="text-[9px] font-mono text-steel border border-white/10 px-1.5 py-0.5 rounded flex items-center gap-1 whitespace-nowrap">
+                                            <span className="w-0.5 h-0.5 rounded-full bg-circuit/60 flex-shrink-0" />
                                             {tech}
                                         </span>
                                     ))}
