@@ -22,7 +22,7 @@ export default function Home() {
             {/* Footer */}
             <footer className="text-center py-8 border-t border-white/5">
                 <p className="text-steel/40 text-xs font-mono">
-                    © {new Date().getFullYear()} · Built with precision
+                    © {new Date().getFullYear()} · Khine Nwe Oo
                 </p>
             </footer>
         </div>
