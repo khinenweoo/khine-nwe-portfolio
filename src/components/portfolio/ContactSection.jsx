@@ -3,12 +3,12 @@ import { Share2, Code2, Send, MessageCircle, Mail, Globe } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 
 const socials = [
-    { name: 'LinkedIn', description: 'Connect professionally', icon: Share2, color: 'bg-blue-600', url: '#' },
-    { name: 'GitHub', description: 'View repositories', icon: Code2, color: 'bg-gray-700', url: '#' },
+    { name: 'LinkedIn', description: 'Connect professionally', icon: Share2, color: 'bg-blue-600', url: 'https://www.linkedin.com/in/khinenweoo' },
+    { name: 'GitHub', description: 'View repositories', icon: Code2, color: 'bg-gray-700', url: 'https://github.com/khinenweoo' },
     { name: 'Twitter / X', description: 'Follow updates', icon: Send, color: 'bg-sky-500', url: '#' },
-    { name: 'WhatsApp', description: 'Message directly', icon: MessageCircle, color: 'bg-green-600', url: '#' },
-    { name: 'Portfolio', description: 'View website', icon: Globe, color: 'bg-teal-600', url: '#' },
-    { name: 'Email', description: 'hello@example.com', icon: Mail, color: 'bg-red-500', url: 'mailto:hello@example.com' },
+    { name: 'WhatsApp', description: 'Message directly', icon: MessageCircle, color: 'bg-green-600', url: 'https://api.whatsapp.com/send/?phone=66827322930&text&type=phone_number&app_absent=0' },
+    { name: 'Portfolio', description: 'View website', icon: Globe, color: 'bg-teal-600', url: 'https://khine-nwe-portfolio.vercel.app/' },
+    { name: 'Email', description: 'collabwithkhine@gmail.com', icon: Mail, color: 'bg-red-500', url: 'mailto:collabwithkhine@gmail.com' },
 ];
 
 const tags = ['Open to collaborations', 'Freelance & partnerships', 'Product building'];
