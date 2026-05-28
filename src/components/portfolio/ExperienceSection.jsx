@@ -45,11 +45,11 @@ const experiences = [
     {
         type: 'Freelance',
         typeColor: 'bg-circuit',
-        title: 'Freelance Web Developer/ Project Coordinator',
+        title: 'Freelancer',
         company: 'Self-employed',
         period: 'August 2025 — Present',
-        description: 'Working as a freelance web developer and project coordinator, collaborating with clients to build custom web solutions. Managing projects from concept to deployment, ensuring timely delivery and client satisfaction.',
-        skills: ['React', 'Next.js', 'Node.js', 'API', 'Project Management', 'Client Communication'],
+        description: 'Working as a freelance web developer, collaborating with clients to build custom web solutions. Managing projects from concept to deployment, ensuring timely delivery and client satisfaction.',
+        skills: ['React', 'Next.js', 'Node.js', 'MongoDB', 'API', 'Client Communication'],
         side: 'left',
     },
 ];

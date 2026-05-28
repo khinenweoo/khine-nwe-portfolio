@@ -3,76 +3,138 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ExternalLink, X, Code2 } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 
-const filters = ['All', 'Competition', 'Academic', 'Freelance', 'Mobile', 'Web', 'AI / ML', 'Game', 'Tools / Extensions'];
+const filters = ['All', 'Personal', 'Company', 'Freelance'];
 
 const projects = [
     {
-        title: 'Bluetooth Offline Emergency Network',
-        type: 'COMPETITION',
+        title: 'MPlus',
+        type: 'COMPANY',
         typeColor: 'bg-red-500/80',
-        category: 'Competition',
-        description: 'A resilient emergency communication network that operates without internet connectivity using Bluetooth mesh technology for disaster response scenarios.',
-        techStack: ['Java', 'Android'],
-        github: '#',
+        category: 'Company',
+        logo: '/logos/Maharnet.jpg',
+        company: 'Mahar NET',
+        description: 'Developed core modules and features for management Portal of MHN company which includes ISP modules such as OM, NOC Operation, Billing, Ticketing, Customer, Finance etc',
+        techStack: ['PHP', 'Laravel', 'Vue.js', 'MySQL', 'API', 'Redis'],
+        github: 'https://github.com/thxawa/Mahar-Net-Server-Side-Project/',
         link: null,
     },
     {
-        title: 'Power House',
-        type: 'FREELANCE',
+        title: 'MHN User Dashboard',
+        type: 'COMPANY',
         typeColor: 'bg-amber-500/80',
-        category: 'Freelance',
-        description: 'Mobile application for energy management and smart grid monitoring with real-time analytics and consumption tracking.',
-        techStack: ['Java', 'Android'],
-        github: '#',
+        category: 'Company',
+        logo: '/logos/Mhn.jpg',
+        company: 'Mahar NET',
+        description: 'Developed backend features to manage customer data and leverage RESTful API as data source streamling data flow across the main system and mobile app.',
+        techStack: ['PHP', 'Laravel', 'Vue.js', 'MySQL', 'Vuex', 'Tailwind CSS'],
+        github: 'https://github.com/thxawa/Mahar-Net-User-Side-Project/',
         link: null,
     },
     {
-        title: 'Life Link VS Code Extension',
-        type: 'ACADEMIC',
+        title: 'Mahar NET Mobile App',
+        type: 'COMPANY',
         typeColor: 'bg-green-500/80',
-        category: 'Academic',
-        description: 'Visual programming extension leveraging Gemini API for AI-assisted code generation and creative p5.js sketch development.',
-        techStack: ['Gemini API', 'p5.js', 'JavaScript'],
-        github: '#',
-        link: null,
+        category: 'Company',
+        logo: '/logos/Mhn.jpg',
+        company: 'Mahar NET',
+        description: 'I was responsible for implementing RESTful APIs of backend operation flows with Laravel and implemented push notifications of this mobile app. This user app aims for customers who are using Mahar NET internet services.',
+        techStack: ['PHP', 'Restful API', 'Firebase', 'Push Notifications'],
+        github: 'https://github.com/thxawa/Mahar-Net-Mobile-App/',
+        link: 'https://play.google.com/store/apps/details?id=com.maharnet.app&hl=en',
     },
     {
-        title: 'AI Chat Dashboard',
-        type: 'WEB',
+        title: 'Proud of Myanmar MarketPlace',
+        type: 'COMPANY',
         typeColor: 'bg-blue-500/80',
-        category: 'Web',
-        description: 'Interactive web dashboard for AI-powered conversations with real-time analytics, conversation history, and advanced filtering capabilities.',
-        techStack: ['React', 'OpenAI', 'Tailwind CSS'],
-        github: '#',
+        category: 'Company',
+        logo: '/logos/pom-logo.png',
+        company: 'AEG',
+        description: 'E-commerce platform for showcasing and selling products from local Myanmar businesses. Developed a robust checkout flow, integrated with Myoe Pya platform for 3D virtual world experience for users to buy and sell products.',
+        techStack: ['Laravel', 'Livewire', 'Sass', 'MySQL', 'Myoe Pya API'],
+        github: 'https://github.com/khinenweoo/multivendor-ecommerce',
         link: '#',
     },
     {
-        title: 'Mobile Fitness Tracker',
-        type: 'MOBILE',
+        title: 'Learning Management System (LMS)',
+        type: 'COMPANY',
         typeColor: 'bg-purple-500/80',
-        category: 'Mobile',
-        description: 'Cross-platform fitness tracking application with workout logging, progress analytics, and cloud synchronization.',
+        category: 'Company',
+        logo: '/logos/AEG.png',
+        company: 'AEG',
+        description: 'Learning management system for students and educators, featuring course management, progress tracking, and interactive learning materials.',
         techStack: ['Flutter', 'Firebase', 'Dart'],
-        github: '#',
+        github: 'https://github.com/khinenweoo/lms-app',
         link: '#',
     },
     {
-        title: 'Terrain Generator',
-        type: 'GAME',
+        title: 'Centre For Behavioral Science',
+        type: 'COMPANY',
         typeColor: 'bg-pink-500/80',
-        category: 'Game',
-        description: 'Procedural terrain generation engine using Perlin noise for realistic landscape creation and real-time modification.',
-        techStack: ['Unity', 'C#', 'Perlin Noise'],
+        category: 'Company',
+        logo: '/logos/cbs.jpg',
+        company: 'GiGA Link Technology',
+        description: 'CBS is an educational platform built with WordPress. My role involves designing user interface and integrating plugins and customized features like Event reigsteration and booking.',
+        techStack: ['WordPress', 'Custom PHP', 'JavaScript', 'CSS', 'UI/UX Design'],
         github: '#',
-        link: null,
+        link: 'https://www.cbs.com.sg/',
     },
     {
-        title: 'Smart Home IoT Controller',
-        type: 'FREELANCE',
+        title: 'Capelle Consulting',
+        type: 'COMPANY',
         typeColor: 'bg-amber-500/80',
-        category: 'Freelance',
-        description: 'Mobile app for controlling IoT devices with real-time synchronization and automated scheduling capabilities.',
-        techStack: ['React Native', 'MQTT', 'Node.js'],
+        category: 'Company',
+        logo: '/logos/capelle.jpg',
+        company: 'GiGA Link Technology',
+        description: 'Developed this platform user interface and features including responsive design, SEO optimization, and content management system.',
+        techStack: ['WordPress', 'Custom PHP', 'JavaScript', 'CSS', 'UI Design'],
+        github: '#',
+        link: 'https://www.capelleconsulting.com/',
+    },
+    {
+        title: 'DMR',
+        type: 'COMPANY',
+        typeColor: 'bg-amber-500/80',
+        category: 'Company',
+        logo: '/logos/dmr.png',
+        company: 'AEG',
+        description: 'DMR is a government department of medical research web application to digitize and modernize public services. I supported the migration of this government site from a legacy VPS domain to a new hosting environment, ensuring seamless deployment and functionality across updated server configurations.',
+        techStack: ['PHP', 'JavaScript', 'Server Migration', 'Data Migration', 'DNS Management'],
+        github: '#',
+        link: 'https://www.dmr.gov.mm/',
+    },
+    {
+        title: 'MHSRJ',
+        type: 'COMPANY',
+        typeColor: 'bg-amber-500/80',
+        category: 'Company',
+        logo: '/logos/mhsrj.png',
+        company: 'AEG',
+        description: 'MHSRJ is a government Health Research web applications built with PHP. Supported the hosting change to a new VPS server, maintained and fixed the existing features of the application.',
+        techStack: ['PHP', 'JavaScript', 'Server Migration', 'Data Migration', 'DNS Management'],
+        github: '#',
+        link: 'https://mhsrj-moh.dmr.gov.mm',
+    },
+    {
+        title: 'Linn IT Shopping',
+        type: 'COMPANY',
+        typeColor: 'bg-amber-500/80',
+        category: 'Company',
+        logo: '/logos/linn_logo.png',
+        company: 'GiGA Link Technology',
+        description: 'Linn is a shopping platform for computer, mobile devices and accessories products. I was responsible for designing and developing the user interface and features of this e-commerce platform built with WordPress.',
+        techStack: ['WordPress', 'WooCommerce', 'JavaScript', 'CSS', 'UI Design'],
+        github: '#',
+        link: 'https://shop.linn.com.mm/',
+    },
+    {
+        title: 'Flexible Pass',
+        type: 'COMPANY',
+        typeColor: 'bg-amber-500/80',
+        category: 'Company',
+        logo: '/logos/GiGALink.jpg',
+        company: 'GiGA Link Technology',
+        description: 'Flexible Pass is a fitness center platform. Designed this website user interface along with UI/UX design and integrated features including SEO optimization and content management system.',
+        techStack: ['WordPress', 'JavaScript', 'CSS', 'UI Design'],
         github: '#',
         link: '#',
     },
@@ -104,12 +166,27 @@ function ProjectDetailModal({ project, onClose }) {
                             {/* Header */}
                             <div className="sticky top-0 bg-slate_surface border-b border-circuit/20 px-6 md:px-8 py-6 flex items-start justify-between">
                                 <div className="flex-1">
-                                    <span className={`${project.typeColor} text-white text-[10px] md:text-xs font-mono font-bold px-2 py-1 rounded inline-block mb-3`}>
-                                        {project.type}
-                                    </span>
+                                    <div className="flex items-center gap-3 mb-3">
+                                        {/* Company Logo in Modal */}
+                                        <div className="w-12 h-12 bg-slate_surface border border-circuit/30 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
+                                            <img
+                                                src={project.logo}
+                                                alt={project.company}
+                                                className="w-full h-full object-cover"
+                                                onError={(e) => {
+                                                    e.target.style.display = 'none';
+                                                    e.target.parentElement.innerHTML = `<span class="text-xs font-bold text-circuit">${project.company.substring(0, 2).toUpperCase()}</span>`;
+                                                }}
+                                            />
+                                        </div>
+                                        <span className={`${project.typeColor} text-white text-[10px] md:text-xs font-mono font-bold px-2 py-1 rounded inline-block`}>
+                                            {project.type}
+                                        </span>
+                                    </div>
                                     <h2 className="gradient-heading font-heading font-bold text-2xl md:text-3xl">
                                         {project.title}
                                     </h2>
+                                    <p className="text-steel text-sm mt-2 font-mono">{project.company}</p>
                                 </div>
                                 <motion.button
                                     whileHover={{ scale: 1.1 }}
@@ -246,14 +323,23 @@ export default function ProjectsSection() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.3, delay: idx * 0.05 }}
-                                onClick={() => !project.link && setSelectedProject(project)}
+                                onClick={() => setSelectedProject(project)}
                                 className="group bg-slate_surface border border-white/10 rounded-lg p-4 md:p-5 hover:border-circuit/30 transition-all duration-300 cursor-pointer"
                             >
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3 md:gap-4 flex-1 min-w-0">
-                                        <span className={`${project.typeColor} text-white text-[9px] md:text-[10px] font-mono font-bold px-2 py-0.5 rounded flex-shrink-0`}>
-                                            {project.type}
-                                        </span>
+                                        {/* Company Logo */}
+                                        <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-slate_surface border border-circuit/30 rounded-full flex items-center justify-center overflow-hidden">
+                                            <img
+                                                src={project.logo}
+                                                alt={project.company}
+                                                className="w-full h-full object-cover"
+                                                onError={(e) => {
+                                                    e.target.style.display = 'none';
+                                                    e.target.parentElement.innerHTML = `<span class="text-xs font-bold text-circuit">${project.company.substring(0, 2).toUpperCase()}</span>`;
+                                                }}
+                                            />
+                                        </div>
                                         <h3 className="gradient-heading font-heading font-medium text-sm md:text-base truncate">
                                             {project.title}
                                         </h3>
@@ -267,24 +353,12 @@ export default function ProjectsSection() {
                                                 </span>
                                             ))}
                                         </div>
-                                        {project.link ? (
-                                            <a
-                                                href={project.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                onClick={(e) => e.stopPropagation()}
-                                                className="hover:text-circuit transition-colors"
-                                            >
-                                                <ExternalLink className="w-4 h-4 text-steel hover:text-circuit transition-colors" />
-                                            </a>
-                                        ) : (
-                                            <motion.div
-                                                whileHover={{ x: 4 }}
-                                                className="group-hover:text-circuit transition-colors cursor-pointer"
-                                            >
-                                                <ArrowRight className="w-4 h-4 text-steel group-hover:text-circuit transition-all" />
-                                            </motion.div>
-                                        )}
+                                        <motion.div
+                                            whileHover={{ x: 4 }}
+                                            className="group-hover:text-circuit transition-colors cursor-pointer"
+                                        >
+                                            <ArrowRight className="w-4 h-4 text-steel group-hover:text-circuit transition-all" />
+                                        </motion.div>
                                     </div>
                                 </div>
                                 {/* Mobile tech stack */}
