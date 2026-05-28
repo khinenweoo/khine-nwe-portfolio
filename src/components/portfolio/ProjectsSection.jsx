@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ExternalLink, X, Code2 } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 
-const filters = ['All', 'Personal', 'Company', 'Freelance'];
+const filters = ['All', 'Personal', 'Company'];
 
 const projects = [
     {
@@ -112,7 +112,7 @@ const projects = [
         description: 'MHSRJ is a government Health Research web applications built with PHP. Supported the hosting change to a new VPS server, maintained and fixed the existing features of the application.',
         techStack: ['PHP', 'JavaScript', 'Server Migration', 'Data Migration', 'DNS Management'],
         github: '#',
-        link: 'https://mhsrj-moh.dmr.gov.mm',
+        link: 'https://mhsrj-moh.dmr.gov.mm/',
     },
     {
         title: 'Linn IT Shopping',
@@ -137,6 +137,66 @@ const projects = [
         techStack: ['WordPress', 'JavaScript', 'CSS', 'UI Design'],
         github: '#',
         link: '#',
+    },
+    {
+        title: 'Mern Chatty',
+        type: 'PERSONAL',
+        typeColor: 'bg-amber-500/80',
+        category: 'Personal',
+        logo: '/logos/PS.jpg',
+        company: 'Personal project',
+        description: 'Developed using MERN stack and Web Socket. This project is a real-time messaging platform along with a seamless user experience, secure login with JWT authentication. It enable users to chat online, filter online users, update profile and manage setting.',
+        techStack: ['MongoDB', 'Express.js', 'React', 'Node.js', 'WebSocket', 'JWT'],
+        github: 'https://github.com/khinenweoo/chat-app-socketio',
+        link: 'https://mern-chatty.vercel.app/',
+    },
+    {
+        title: 'Ktube Lite',
+        type: 'PERSONAL',
+        typeColor: 'bg-amber-500/80',
+        category: 'Personal',
+        logo: '/logos/PS.jpg',
+        company: 'Personal project',
+        description: 'An interactive YouTube UI clone built with Tailwind and React, featuring a clean responsive design.It integrates with Rapid API to fetch real- time video data, providing users with a seamless browsing experience similar to the original platform.',
+        techStack: ['React', 'Rapid API', 'Tailwind CSS'],
+        github: 'https://github.com/khinenweoo/youtube-lite',
+        link: 'https://ktube-lite.vercel.app/',
+    },
+    {
+        title: 'Smart Spender',
+        type: 'PERSONAL',
+        typeColor: 'bg-amber-500/80',
+        category: 'Personal',
+        logo: '/logos/PS.jpg',
+        company: 'Personal project',
+        description: 'A simple finance tracker website designed to help users to track their financial health. It provides tools for monitoring daily income and expenses, allowing users to maintain a clear overview of their financial. Developed as a practical project to facilitate learning in MERN full stack development.',
+        techStack: ['React', 'Rapid API', 'Tailwind CSS'],
+        github: 'https://github.com/khinenweoo/mern-personal-finance-tracker',
+        link: 'https://smartspender-track.vercel.app/',
+    },
+    {
+        title: 'Projix',
+        type: 'PERSONAL',
+        typeColor: 'bg-amber-500/80',
+        category: 'Personal',
+        logo: '/logos/PS.jpg',
+        company: 'Personal project',
+        description: 'Team project management platform named Projix built with Laravel and React, featuring role based user portals. The project is deployed using AWS cloud services. It supports admin management tasks like creating, editing, assigning projects, and also completing tasks by members.',
+        techStack: ['React', 'Laravel', 'AWS', 'PHP', 'Tailwind CSS'],
+        github: 'https://github.com/khinenweoo/Project-Creator-App',
+        link: 'http://laravelapp.projextrack.site/',
+    },
+    {
+        title: 'Znisa Portfolio',
+        type: 'PERSONAL',
+        typeColor: 'bg-amber-500/80',
+        category: 'Personal',
+        logo: '/logos/PS.jpg',
+        company: 'Personal project',
+        description: 'A portfolio website for Znisa featuring a modern UI and animations. Built with React, Framer Motion and Tailwind CSS, it showcases projects elements with a sleek, responsive design.',
+        techStack: ['React', 'Framer Motion', 'Tailwind CSS'],
+        github: 'https://github.com/khinenweoo/portfolio-site',
+        link: 'https://znisaportfoliosite.vercel.app/',
     },
 ];
 
