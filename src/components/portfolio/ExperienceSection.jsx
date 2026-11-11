@@ -10,7 +10,7 @@ const experiences = [
         location: 'Bangkok, Thailand (On site)',
         period: 'Jun 2026 — Present',
         description: 'Lead end-to-end development and partner negotiations, turning business needs into shipped features. Engineered a server-authoritative emergency voice platform on Agora RTC with reliable, secure APIs and integrations, plus a real-time operations dashboard for monitoring, alerts, and incident response.',
-        skills: ['React', 'TypeScript', 'PHP', 'Laravel', 'MongoDB', 'Agora RTC', 'API Development', 'Server Management', 'System Architecture', 'Team Leadership'],
+        skills: ['React', 'TypeScript', 'PHP', 'Laravel', 'PostgreSQL', 'Agora RTC', 'API Development', 'Server Management', 'System Architecture', 'Team Leadership'],
         side: 'left',
     },
     {
