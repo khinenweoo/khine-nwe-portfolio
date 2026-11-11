@@ -5,42 +5,18 @@ const experiences = [
     {
         type: 'WORK',
         typeColor: 'bg-circuit',
-        title: 'Computer Operator',
-        company: 'Yangon City Development Committee(Water Management Department)',
-        period: 'March 2014 — 2019',
-        description: 'Responsible for operating and maintaining computer systems and software. Drawing Water Pipelines and maps with AutoCAD software, and estimating engineering costs. Managed data entry, system monitoring, and provided technical support to ensure smooth operations.',
-        skills: ['AutoCAD Design', 'Engineering Estimation', 'Technical Support'],
+        title: 'Senior Software Engineer',
+        company: 'SiamLynk',
+        location: 'Bangkok, Thailand (On site)',
+        period: '2026 — Present',
+        bullets: [
+            'Lead development end to end, from shaping requirements with stakeholders to shipping and iterating, and negotiate with partner business stakeholders to translate business needs into technical priorities into business context.',
+            'Develop and maintain features, APIs, data models, and integrations with third-party systems, designing for reliability, security, and performance under load. This includes clear API contracts, idempotent operations, and sensible caching and pagination.',
+            'Write and review technical design documents for medium-to-large features, evaluate trade-offs, and contribute to platform-wide architecture decisions.',
+            'Evaluate vendor APIs and SDKs for fit, cost, and failure modes. Build integration layers with retries, timeouts, and webhook handling so a vendor outage doesn’t take down our own features.',
+            'Handle production issues within your domain, and lead follow-through improvements.',
+        ],
         side: 'left',
-    },
-    {
-        type: 'WORK',
-        typeColor: 'bg-blue-500',
-        title: 'Web Developer',
-        company: 'GiGA Link Technology',
-        period: 'Jan 2020 — Feb 2021',
-        description: 'Worked as a web developer creating modern, responsive websites and web applications for various clients. Built interactive user interfaces and smooth user experiences for platforms with WordPress, Drupal and Magento along with UI/UX Design.',
-        skills: ['WordPress', 'Drupal', 'UI/UX', 'Ecommerce', 'Web Development'],
-        side: 'right',
-    },
-    {
-        type: 'WORK',
-        typeColor: 'bg-circuit',
-        title: 'Senior Web Developer & Instructor',
-        company: 'Ayeyarwaddy Group (AEG)',
-        period: 'April 2021 — May 2022',
-        description: 'Built full-stack applications, led system architecture decisions, and mentored junior developers. Taught programming fundamental concepts to students, focusing on practical application on real-world projects.',
-        skills: ['Php', 'Laravel', 'Livewire', 'JavaScript', 'MySQL', 'Git', 'API Development', 'Mentorship'],
-        side: 'left',
-    },
-    {
-        type: 'WORK',
-        typeColor: 'bg-blue-500',
-        title: 'Full Stack Developer',
-        company: 'Mahar NET',
-        period: 'July 2022 — Dec 2024',
-        description: 'Contributed to the in-house software development and maintenance of the web portals. Implemented complex various modules in ISP Systems, improving performance and scalability.',
-        skills: ['Vue.js', 'PHP', 'Laravel', 'API Development', 'MySQL', 'Git', 'Nginx', 'Server Management', 'Performance Optimization'],
-        side: 'right',
     },
     {
         type: 'Freelance',
@@ -50,7 +26,47 @@ const experiences = [
         period: 'August 2025 — Present',
         description: 'Working as a freelance web developer, collaborating with clients to build custom web solutions. Managing projects from concept to deployment, ensuring timely delivery and client satisfaction.',
         skills: ['React', 'Next.js', 'Node.js', 'MongoDB', 'API', 'Client Communication'],
+        side: 'right',
+    },
+    {
+        type: 'WORK',
+        typeColor: 'bg-blue-500',
+        title: 'Full Stack Developer',
+        company: 'Mahar NET',
+        period: 'July 2022 — Dec 2024',
+        description: 'Contributed to the in-house software development and maintenance of the web portals. Implemented complex various modules in ISP Systems, improving performance and scalability.',
+        skills: ['Vue.js', 'PHP', 'Laravel', 'API Development', 'MySQL', 'Git', 'Nginx', 'Server Management', 'Performance Optimization'],
         side: 'left',
+    },
+    {
+        type: 'WORK',
+        typeColor: 'bg-circuit',
+        title: 'Senior Web Developer & Instructor',
+        company: 'Ayeyarwaddy Group (AEG)',
+        period: 'April 2021 — May 2022',
+        description: 'Built full-stack applications, led system architecture decisions, and mentored junior developers. Taught programming fundamental concepts to students, focusing on practical application on real-world projects.',
+        skills: ['Php', 'Laravel', 'Livewire', 'JavaScript', 'MySQL', 'Git', 'API Development', 'Mentorship'],
+        side: 'right',
+    },
+    {
+        type: 'WORK',
+        typeColor: 'bg-blue-500',
+        title: 'Web Developer',
+        company: 'GiGA Link Technology',
+        period: 'Jan 2020 — Feb 2021',
+        description: 'Worked as a web developer creating modern, responsive websites and web applications for various clients. Built interactive user interfaces and smooth user experiences for platforms with WordPress, Drupal and Magento along with UI/UX Design.',
+        skills: ['WordPress', 'Drupal', 'UI/UX', 'Ecommerce', 'Web Development'],
+        side: 'left',
+    },
+    {
+        type: 'WORK',
+        typeColor: 'bg-circuit',
+        title: 'Computer Operator',
+        company: 'Yangon City Development Committee(Water Management Department)',
+        period: 'March 2014 — 2019',
+        description: 'Responsible for operating and maintaining computer systems and software. Drawing Water Pipelines and maps with AutoCAD software, and estimating engineering costs. Managed data entry, system monitoring, and provided technical support to ensure smooth operations.',
+        skills: ['AutoCAD Design', 'Engineering Estimation', 'Technical Support'],
+        side: 'right',
     },
 ];
 
@@ -74,15 +90,32 @@ function TimelineCard({ exp, index }) {
                     <span className="text-steel text-xs font-mono">{exp.period}</span>
                 </div>
                 <h3 className="gradient-heading font-heading font-semibold text-base md:text-lg mb-1">{exp.title}</h3>
-                <p className="text-red-200 text-sm mb-3">{exp.company}</p>
-                <p className="text-white/60 text-sm leading-relaxed mb-4">{exp.description}</p>
-                <div className="flex flex-wrap gap-2">
-                    {exp.skills.map((skill) => (
-                        <span key={skill} className="text-[11px] font-mono text-steel border border-white/10 px-2 py-1 rounded">
-                            ◆ {skill}
-                        </span>
-                    ))}
-                </div>
+                <p className={`text-red-200 text-sm ${exp.location ? 'mb-1' : 'mb-3'}`}>{exp.company}</p>
+                {exp.location && (
+                    <p className="text-steel text-xs font-mono mb-3">{exp.location}</p>
+                )}
+                {exp.description && (
+                    <p className="text-white/60 text-sm leading-relaxed mb-4">{exp.description}</p>
+                )}
+                {exp.bullets && (
+                    <ul className="space-y-2 mb-4">
+                        {exp.bullets.map((item) => (
+                            <li key={item} className="flex gap-2 text-white/60 text-sm leading-relaxed">
+                                <span className="mt-1.5 w-1 h-1 rounded-full bg-circuit flex-shrink-0" />
+                                <span>{item}</span>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+                {exp.skills && (
+                    <div className="flex flex-wrap gap-2">
+                        {exp.skills.map((skill) => (
+                            <span key={skill} className="text-[11px] font-mono text-steel border border-white/10 px-2 py-1 rounded">
+                                ◆ {skill}
+                            </span>
+                        ))}
+                    </div>
+                )}
             </motion.div>
 
             {/* Timeline dot - hidden on mobile */}

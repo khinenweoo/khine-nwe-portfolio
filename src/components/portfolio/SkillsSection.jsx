@@ -15,13 +15,18 @@ const categories = [
     },
     {
         name: 'Cloud / DevOps',
-        description: 'Infrastructure & deployment',
-        skills: ['AWS', 'Docker', 'CI/CD', 'Nginx']
+        description: 'Infrastructure & cloud',
+        skills: ['AWS', 'Docker', 'CI/CD']
     },
     {
         name: 'DB / Tools',
         description: 'Databases & developer tools',
         skills: ['PostgreSQL', 'MySQL', 'Firebase', 'Supabase', 'Git', 'GitHub', 'Postman']
+    },
+    {
+        name: 'Server & Deployment',
+        description: 'Ubuntu Server',
+        skills: ['Linux administration', 'Nginx/Apache', 'SSL', 'Deployments', 'Server Management']
     },
 ];
 

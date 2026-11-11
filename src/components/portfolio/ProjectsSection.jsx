@@ -7,6 +7,26 @@ const filters = ['All', 'Personal', 'Company'];
 
 const projects = [
     {
+        title: 'SaferLynk',
+        type: 'FREELANCE',
+        typeColor: 'bg-teal-500/80',
+        category: 'Personal',
+        logo: '/logos/saferlynk.svg',
+        company: 'Freelance project',
+        description: 'SaferLynk — 24/7 Travel Assistance Platform for Tourists in Thailand. SaferLynk connects travelers in Thailand to live support agents through in-app voice calls. A traveler in trouble opens the mobile app and places a call; the platform verifies their coverage and remaining minutes, routes them by language and situation, and connects them to an available agent in real time. I built the Laravel API and the React operations dashboard that power the service:',
+        bullets: [
+            'Real-time voice calls — Agora RTC calling with server-issued tokens, a Redis-backed waiting queue, agent presence tracking, and language- and situation-based routing.',
+            'Agent console and live call monitoring — agents answer incoming calls in the browser, while supervisors watch the queue and call activity live over WebSockets.',
+            'Minute-based billing — prepaid call minutes deducted per connected minute, with in-app purchases and top-ups reconciled against Apple and Google store records via RevenueCat.',
+            'Operations dashboard — one permission-gated app for managing travelers, agents, wallets, purchases, invoices, documents, and notifications, with role-based access editable at runtime.',
+            'Oversight and reliability — audit logging, login activity tracking, system alerts for operational problems, and push and email notifications to travelers.',
+        ],
+        techStack: ['PHP', 'Laravel', 'React', 'TypeScript', 'WebSocket', 'Redis', 'Firebase', 'API', 'Tailwind CSS'],
+        github: 'https://github.com/saferlynk-appowner/saferlynk-web',
+        githubPrivate: true,
+        link: 'https://safer-lynk.com/',
+    },
+    {
         title: 'MPlus',
         type: 'COMPANY',
         typeColor: 'bg-red-500/80',
@@ -266,6 +286,16 @@ function ProjectDetailModal({ project, onClose }) {
                                     <p className="text-sulfur/80 leading-relaxed">
                                         {project.description}
                                     </p>
+                                    {project.bullets && (
+                                        <ul className="mt-3 space-y-2">
+                                            {project.bullets.map((item) => (
+                                                <li key={item} className="flex gap-2.5 text-sulfur/80 leading-relaxed">
+                                                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-circuit flex-shrink-0" />
+                                                    <span>{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
                                 </div>
 
                                 {/* Tech Stack */}
@@ -300,7 +330,7 @@ function ProjectDetailModal({ project, onClose }) {
                                             className="flex items-center gap-2 bg-circuit/20 hover:bg-circuit/30 border border-circuit/40 text-circuit px-4 py-2 rounded-lg font-mono text-sm transition-all"
                                         >
                                             <Code2 className="w-4 h-4" />
-                                            GitHub
+                                            {project.githubPrivate ? 'GitHub (private)' : 'GitHub'}
                                         </motion.a>
                                         {project.link && (
                                             <motion.a
