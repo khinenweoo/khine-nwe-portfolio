@@ -8,7 +8,7 @@ const filters = ['All', 'Personal', 'Company'];
 const projects = [
     {
         title: 'SaferLynk',
-        type: 'FREELANCE',
+        type: 'COMPANY',
         typeColor: 'bg-teal-500/80',
         category: 'Personal',
         logo: '/logos/saferlynk.svg',
